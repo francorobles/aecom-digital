@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+}
+
+h5 {
+    color: #FFF;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Float four columns side by side */
+.column {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+  }
+  
+  /* Remove extra left and right margins, due to padding in columns */
+  .row {margin: 0 -5px;}
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Style the counter cards */
+  .card {
+    box-shadow: 0 4px 8px 0; /* this adds the "card" effect */
+    text-align: center;
+    background-color: #f1f1f1;
+    height: 100%;
+    cursor: pointer;
+  }
+  
+
+.project {
+    position: relative;
+    flex: 0 0 calc(50% - 20px);
+    margin: 10px;
+    overflow: hidden;
+    background: black;
+}
+
+.project-image {
+    width:100%;
+    object-fit: 'cover';
+}
