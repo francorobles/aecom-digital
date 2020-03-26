@@ -10,8 +10,8 @@ export default class App extends React.PureComponent {
     return(
       <BrowserRouter>
         <Switch>
-          <Route exact path="/" component={List} />
-          <Route exact path="/:id" component={Details} />
+          <Route exact path="/details/:id" component={Details} />
+          <Route exact path="" component={List} />
         </Switch>
       </BrowserRouter>
     )

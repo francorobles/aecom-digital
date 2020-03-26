@@ -28,7 +28,7 @@ export default class Details extends React.Component {
             <div className='container'>
                 <Header mainHeader={this.state.title} subHeader={this.state.description} />
                 <br />
-                <img src={`https://apps.aecom-digital.com/excellence/${this.state.image}`} />
+                <img alt='' src={`https://apps.aecom-digital.com/excellence/${this.state.image}`} />
             </div>
         );
     }

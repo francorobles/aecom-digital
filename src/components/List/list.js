@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { v4 as uuid } from 'uuid';
 
 import Header from '../Header/header';
@@ -19,7 +18,7 @@ export default class List extends React.Component {
 
     viewDetails(project) {
         this.props.history.push({
-            pathname: `/${project.id}`,
+            pathname: `/details/${project.id}`,
             state: {
                 title: project.title,
                 description: project.project_text,
@@ -32,10 +31,9 @@ export default class List extends React.Component {
         if (this.state.data) {
             const list = this.getCategories(this.state.data).map(row => {
                 return (
-                    <div>
+                    <div className='row'>
                         <Header mainHeader={row.Category_title} subHeader={row.Category_intro} key={uuid()} />
                         <br />
-                        <div className='row'>
                         {
                             this.getProjects(row.projects, this.state.data).map(project => {
                                 return (
@@ -49,7 +47,6 @@ export default class List extends React.Component {
                                 );
                             })
                         }
-                        </div>
                     </div>
                 )
             })
@@ -60,6 +57,7 @@ export default class List extends React.Component {
     }
     
     componentDidMount() {
+        console.log("1");
         fetch('https://apps.aecom-digital.com/excellence/projects')
             .then(response => response.json())
             .then(responseJson => this.setState({ data : responseJson }))
@@ -70,7 +68,7 @@ export default class List extends React.Component {
         let rowProjects = []
         if (projects.length) {
             projects.map(projectId => {
-                rowProjects.push(
+                return rowProjects.push(
                     mainData.find(data => data.id === projectId))
             })
         }

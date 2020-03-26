@@ -11,6 +11,11 @@ h5 {
 .container {
     display: flex;
     flex-direction: column;
+    color: #FFF;
+}
+
+.loader {
+  color: #FFF;
 }
 
 /* Float four columns side by side */
