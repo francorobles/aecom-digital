@@ -37,7 +37,7 @@ export default class List extends React.Component {
                         {
                             this.getProjects(row.projects, this.state.data).map(project => {
                                 return (
-                                    <div className='col-sm-3 ' onClick={() => this.viewDetails(project)}>
+                                    <div className='col-sm-3 ae-padded' onClick={() => this.viewDetails(project)}>
                                         <div className='card' style={{ 
                                             backgroundImage: `url('https://apps.aecom-digital.com/excellence/${project.image.url}')`,
                                             backgroundSize: 'cover'
