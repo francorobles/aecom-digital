@@ -40,13 +40,16 @@ export default class List extends React.Component {
                                     <div className='column' onClick={() => this.viewDetails(project)}>
                                         <div className='card' style={{ 
                                             backgroundImage: `url('https://apps.aecom-digital.com/excellence/${project.image.url}')`,
-                                            backgroundSize: 'cover' }}>
-                                            <h5>{project.title}</h5>
+                                            backgroundSize: 'cover'
+                                        }}>
+                                            <h5></h5>
                                         </div>
+                                        <h5 className='box-label'>{project.title}</h5>
                                     </div>
                                 );
                             })
                         }
+                        <br />
                         <br />
                         <a href="#">Back To Top</a>
                         <br />

@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/aecom-digital/precache-manifest.02f3a7c15671fcf836585c913ffe0458.js"
+  "/aecom-digital/precache-manifest.b8aadadc72118e665fccf2d13cdda811.js"
 );
 
 self.addEventListener('message', (event) => {
