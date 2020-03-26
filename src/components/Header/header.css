@@ -8,6 +8,7 @@
     padding-bottom: 15px;
 }
 
-.container {
-    padding: 5px;
+.ae-container {
+    width: 100%;
+    padding: 20px;
 }

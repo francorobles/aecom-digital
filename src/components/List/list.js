@@ -31,27 +31,29 @@ export default class List extends React.Component {
         if (this.state.data) {
             const list = this.getCategories(this.state.data).map(row => {
                 return (
-                    <div className='row'>
+                    <div className='row ae-padded'>
                         <Header mainHeader={row.Category_title} subHeader={row.Category_intro} key={uuid()} />
                         <br />
                         {
                             this.getProjects(row.projects, this.state.data).map(project => {
                                 return (
-                                    <div className='column' onClick={() => this.viewDetails(project)}>
+                                    <div className='col-sm-3 ' onClick={() => this.viewDetails(project)}>
                                         <div className='card' style={{ 
                                             backgroundImage: `url('https://apps.aecom-digital.com/excellence/${project.image.url}')`,
                                             backgroundSize: 'cover'
                                         }}>
                                             <h5></h5>
                                         </div>
-                                        <h5 className='box-label'>{project.title}</h5>
+                                        <h6 className='box-label'>{project.title}</h6>
                                     </div>
                                 );
                             })
                         }
                         <br />
                         <br />
-                        <a href="#">Back To Top</a>
+                        <div className='ae-container'>
+                            <a className='ae-back-to-top' href="#">Back To Top</a>
+                        </div>
                         <br />
                     </div>
                 )
