@@ -47,6 +47,9 @@ export default class List extends React.Component {
                                 );
                             })
                         }
+                        <br />
+                        <a href="#">Back To Top</a>
+                        <br />
                     </div>
                 )
             })
