@@ -1,4 +1,1 @@
-TO RUN:
-
-1. npm install
-2. yarn start
+This is a bad implementation of ReactJS. Will rewrite. ;-)
